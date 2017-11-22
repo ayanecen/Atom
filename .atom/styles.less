@@ -17,7 +17,8 @@
 
 // style the background color of the tree view
 .tree-view {
-  // background-color: whitesmoke;
+//background-color: whitesmoke;
+font-size: 14px;
 }
 
 // style the background and foreground colors on the atom-text-editor-element itself
@@ -29,4 +30,21 @@ atom-text-editor {
 // style UI elements inside atom-text-editor
 atom-text-editor .cursor {
   // border-color: red;
+}
+
+//検索結果をハイライト
+atom-text-editor::shadow {
+  .gutter .cursor-line {
+    background-color: fade(skyblue, 40%);
+  }
+  .highlights {
+    .selection .region {
+      border: 1px solid fade(crimson, 30%);
+      background: fade(crimson, 20%);
+    }
+    .find-result .region {
+      border: 1px solid fade(cyan, 30%);
+      background: fade(cyan, 20%);
+    }
+  }
 }
